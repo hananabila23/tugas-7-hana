@@ -65,17 +65,14 @@
         $namamk = $_POST['namamk'];
         $jumlah_sks = $_POST['jumlah_sks'];
 
-        // Update Mahasiswa
         mysqli_query($conn, "UPDATE Mahasiswa SET 
             nama='$nama', jurusan='$jurusan', alamat='$alamat' 
             WHERE npm='$npm'");
 
-        // Update Mata Kuliah
         mysqli_query($conn, "UPDATE MataKuliah SET 
             namamk='$namamk', jumlah_sks='$jumlah_sks' 
             WHERE kodemk='$kodemk'");
 
-        // Update KRS
         mysqli_query($conn, "UPDATE KRS SET 
             mahasiswa_npm='$npm', matakuliah_kodemk='$kodemk' 
             WHERE id='$id'");
